@@ -17,10 +17,14 @@ SDHT dht;
 void display_temp(Adafruit_NeoMatrix *mat, int pin)
 {
 
-  if (dht.read(DHT11, 11)){
+  if (dht.read(DHT11, pin)){
     temp = double(dht.celsius) / 10;
     remainder = dht.celsius % 10;
   }
+
+  temp = 25;
+  remainder = 3;
+
 
   Serial.print("   Celsius => ");
   Serial.print(temp);

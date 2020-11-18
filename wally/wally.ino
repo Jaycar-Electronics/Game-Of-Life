@@ -2,14 +2,14 @@
 #include <Adafruit_NeoMatrix.h>
 #include "wally.h"
 
-#define DISPLAY_SLOWNESS 350
+#define DISPLAY_SLOWNESS 200
 
 #define MINUTES 60 * 100
 #define TIMER_GAME 5 * MINUTES
 #define TIMER_TEMP 2 * MINUTES
 
-#define DHT_PIN 11
-#define LED_PIN 6
+#define DHT_PIN 9
+#define LED_PIN 11
 
 unsigned long last_change = 0;
 bool show_game = true;
@@ -22,9 +22,10 @@ Adafruit_NeoMatrix *matrix = new Adafruit_NeoMatrix(BOARD_WIDTH, BOARD_HEIGHT, L
 
 void setup()
 {
-
+  pinMode(A0, INPUT);
+  randomSeed(analogRead(A0));
   Serial.begin(9600);
-  pixels.setBrightness(32);
+  pixels.setBrightness(100);
   pixels.begin();
 
   matrix->begin();
@@ -34,7 +35,7 @@ void setup()
 
 void loop()
 {
-  if (show_game)
+  if (true)
   {
     if ((millis() - last_change) > TIMER_GAME)
     {

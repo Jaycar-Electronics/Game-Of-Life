@@ -42,7 +42,7 @@ This repository contains the code for the 32u4 mini. It uses both the `Adafruit 
 Game of life is just implemented with a `100` element 8bit array that is bitshifted between each state. A neat idea could be to use some of the bits to
 
 ## How to build
-<div id='instructions'> For how to build instructions, check out https://jaycar.com.au/</div>
+<div id='instructions'> For how to build instructions, check out https://jaycar.com.au/wall-thermostat</div>
 
 ## How to improve
 

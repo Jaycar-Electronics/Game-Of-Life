@@ -18,7 +18,7 @@
 #define BOTLEFT_N(i) (BOT_N(i) - 1)
 #define BOTRIGHT_N(i) (BOT_N(i) + 1)
 
-#define POS(x, y) (x * BOARD_WIDTH + y)
+#define POS(x, y) (y * BOARD_WIDTH + x)
 
 unsigned short gameboard[BOARD_SIZE] = {0};
 

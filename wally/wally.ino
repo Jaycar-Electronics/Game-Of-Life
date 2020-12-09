@@ -35,7 +35,7 @@ void setup()
 
 void loop()
 {
-  if (true)
+  if (show_game)
   {
     if ((millis() - last_change) > TIMER_GAME)
     {
